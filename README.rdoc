@@ -1,5 +1,9 @@
 == README
 
+Note that I have commented out the versions of some of the gems I am using, to make it work. Must find out ramifications of that...
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
