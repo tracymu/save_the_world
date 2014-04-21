@@ -2,6 +2,10 @@
 
 Note that I have commented out the versions of some of the gems I am using, to make it work. Must find out ramifications of that...
 
+Sign Out doesn't work in deployment
+
+Zurb hasn't worked in deployment
+
 
 
 This README would normally document whatever steps are necessary to get the
