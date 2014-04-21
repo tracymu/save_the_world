@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Save the World in 30 Minutes" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -18,7 +18,7 @@
 
 <%= link_to 'Settings', edit_user_registration_path(current_user) %>
 <%= link_to 'Sign out', destroy_user_session_path, :method => 'delete' %>
-<!-- <% else %>
+<!-- need an else in here if I change it. -->
 
 
 <!-- <%= link_to 'Sign in', new_user_session_path %> -->
@@ -28,8 +28,11 @@
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <div class="row">
     <h1><%= link_to 'Save the World in 30 Minutes', 'activities#index' %></h1>
-    <%= yield %>
+
+      <%= yield %>
+    </div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

@@ -4,8 +4,7 @@ Note that I have commented out the versions of some of the gems I am using, to m
 
 Sign Out doesn't work in deployment
 
-Zurb hasn't worked in deployment
-
+Make a form people can complete to send to me http://everydayrails.com/2011/09/07/rails-contact-form.html
 
 
 This README would normally document whatever steps are necessary to get the
