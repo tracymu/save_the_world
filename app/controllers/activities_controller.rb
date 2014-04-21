@@ -75,7 +75,8 @@ class ActivitiesController < ApplicationController
 
     def authenticate
       authenticate_or_request_with_http_basic do |name, password|
-      name == "admin" && password == "secret"
+      name == "tracymu" && password == "thisisongithub"
     end
+  end
 
 end

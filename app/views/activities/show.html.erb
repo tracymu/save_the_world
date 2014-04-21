@@ -1,6 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<%= render :partial => @activity %>
+<H2><%= link_to_unless_current @activity.title, @activity %></h2>
+
+<p>
+  <strong>Description:</strong>
+  <%= @activity.description.html_safe %>
+</p>
+
+<p>
+  <strong>Estimated time:</strong>
+  <%= @activity.estimated_time %>
+</p>
+
+<p>
+  <strong>Estimated cost:</strong>
+  <%= @activity.estimated_cost %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @activity.location %>
+</p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>

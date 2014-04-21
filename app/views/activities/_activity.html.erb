@@ -1,20 +1,10 @@
-<H2><%= link_to_unless_current activity.title, @activity %></h2>
-
-<p>
-  <strong>Description:</strong>
-  <%= simple_format activity.description %>
-</p>
-
+<H2><%= link_to activity.title, activity %></h2>
 
 <p>
   <strong>Estimated time:</strong>
   <%= activity.estimated_time %>
 </p>
 
-<p>
-  <strong>Estimated cost:</strong>
-  <%= activity.estimated_cost %>
-</p>
 
 <p>
   <strong>Location:</strong>
