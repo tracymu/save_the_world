@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
-
-<H2><%= link_to_unless_current @activity.title, @activity %></h2>
+<hr>
+<h3><%= link_to_unless_current @activity.title, @activity %></h3>
 
 <p>
-  <strong>Description:</strong>
+
   <%= @activity.description.html_safe %>
 </p>
 
@@ -14,7 +14,7 @@
 
 <p>
   <strong>Estimated cost:</strong>
-  <%= @activity.estimated_cost %>
+  $<%= @activity.estimated_cost %>
 </p>
 
 <p>
@@ -30,3 +30,4 @@
 <% end %>
 
 <p><%= link_to 'Back', activities_path %></p>
+<hr>
