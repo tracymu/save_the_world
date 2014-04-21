@@ -1,4 +1,5 @@
 class ActivitiesController < ApplicationController
+  before_filter :authenticate, :except => [ :index, :show ]
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   # GET /activities
@@ -71,4 +72,10 @@ class ActivitiesController < ApplicationController
     def activity_params
       params.require(:activity).permit(:title, :description, :estimated_time, :estimated_cost, :location)
     end
+
+    def authenticate
+      authenticate_or_request_with_http_basic do |name, password|
+      name == "admin" && password == "secret"
+    end
+
 end
