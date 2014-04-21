@@ -1,4 +1,4 @@
-<h1>Save the World in 30 Minutes</h1>
+
 <p> Got a spare 30 minutes this weekend and want to use it to save the world? You'd be surprised at the number of things you can use that time for that will really make a difference.</p>
 
 <p>Doing small things to help others is beneficial not only to the recipients, but also to your own self esteem and well being. Imagine how good you'll feel if you tick off one of these 30 minute activities every week. You can brag to your friends and family about what a great person you are, and earn some good karma into the bargain.</p>
@@ -9,4 +9,7 @@
 
  <%= render :partial => @activities %>
 
+
+<% if current_user %>
 <%= link_to 'New Activity', new_activity_path %>
+<% end %>
