@@ -6,6 +6,8 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Save the World in 30 Minutes" %></title>
 
+
+
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -15,12 +17,13 @@
 
 
     <% if current_user %>
-
 <%= link_to 'Settings', edit_user_registration_path(current_user) %>
-<%= link_to 'Sign out', destroy_user_session_path, :method => 'delete' %>
 <!-- need an else in here if I change it. -->
+<% if current_user %>
+<%= link_to 'New Activity', new_activity_path %>
+<% end %>
 
-
+<%= link_to 'Sign out', destroy_user_session_path, :method => 'delete' %>
 <!-- <%= link_to 'Sign in', new_user_session_path %> -->
 
 <!-- <%= link_to 'Sign Up', new_user_registration_path %> -->
@@ -29,7 +32,6 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <div class="row">
-    <h2><%= link_to 'Save the World in 30 Minutes', activities_path %></h2>
 
       <%= yield %>
     </div>

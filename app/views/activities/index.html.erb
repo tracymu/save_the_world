@@ -1,18 +1,26 @@
+<div class = "container">
 
-<div class="panel">
-  <p> Got a spare 30 minutes this weekend and want to use it to save the world? You'd be surprised at the number of things you can use that time for that will really make a difference.</p>
-
-  <p>Doing small things to help others is beneficial not only to the recipients, but also to your own self esteem and well being. Imagine how good you'll feel if you tick off one of these 30 minute activities every week. You can brag to your friends and family about what a great person you are, and earn some good karma into the bargain.</p>
-
-  <p>Below is a list of activities anyone can undertake to help save the world in small ways. Some of these can take <strong>as little as 30 minutes</strong> of your time. </p>
-
-  <p><a class="button tiny" href="mailto:tracy.musung@moomumedia.com">Contact me</a> if you have an activity you would like to add to the list.</p>
+  <div class = "nav">
+    <ul>
+      <li>About</li>
+      <li>Add an Activity</li>
+    </ul>
+  </div>
+  
+  <div class = "body">
+    <div class = "site-title"><h1>Save the World...</h1></div>
+    <div class = "site-tagline"><h2>...30 Minutes at a Time</h2></div>
+    <div class = "activity">
+      <div class = "activity-title">
+        <%= @activities.find(rand(1..@activities.count)).title %>
+        <!-- take this above out and put in a helper? -->
+      </div>
+      <div class = "activity-text"></div>
+      <div class = "buttons">
+        <button type = "button">Give me more info</button>
+        <button type = "button">Next Idea</button>
+      </div>
+    </div>
+  </div>
+  <div class = "footer"><a href="">Contact</a></div>
 </div>
-
-
- <%= render :partial => @activities %>
-
-
-<% if current_user %>
-<%= link_to 'New Activity', new_activity_path %>
-<% end %>
