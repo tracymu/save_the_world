@@ -1,26 +1,32 @@
-<div class = "container">
+<div class="row">
+  <div class="title col-sm-2"></div>
+  <div class="title col-sm-6">
+  <div class="title col-sm-4"></div>
+    <h1>Save the World...</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="title col-sm-2"></div>
+  <div class = "tagline col-sm-6">
+  <div class="title col-sm-4"></div>
 
-  <div class = "nav">
-    <ul>
-      <li>About</li>
-      <li>Add an Activity</li>
-    </ul>
+    <h3>...30 Minutes at a Time</h3>
   </div>
-  
-  <div class = "body">
-    <div class = "site-title"><h1>Save the World...</h1></div>
-    <div class = "site-tagline"><h2>...30 Minutes at a Time</h2></div>
-    <div class = "activity">
-      <div class = "activity-title">
-        <%= @activities.find(rand(1..@activities.count)).title %>
-        <!-- take this above out and put in a helper? -->
-      </div>
-      <div class = "activity-text"></div>
-      <div class = "buttons">
-        <button type = "button">Give me more info</button>
-        <button type = "button">Next Idea</button>
-      </div>
-    </div>
+</div>
+<div class="row">
+  <div class="title col-sm-2"></div>
+  <div class = "activity col-sm-6">
+    <%= @activities.find(rand(1..@activities.count)).title %>
   </div>
-  <div class = "footer"><a href="">Contact</a></div>
+  <div class="title col-sm-4"></div>
+</div>
+<div class = "row">
+  <div class="title col-sm-2"></div>
+  <div class="col-sm-3">
+    <button type = "button info">Give me more info</button>
+  </div>
+  <div class="col-sm-3 ">
+      <button type = "button next">Next Idea</button>
+  </div>
+  <div class="title col-sm-4"></div>
 </div>
